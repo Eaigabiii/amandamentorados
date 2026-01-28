@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apresentação de Mentoria - Amanda Dalprá. Clientologia, Conexão e High Tech.">
+    <title>Mentoria Amanda Dalprá | A Arte da Conexão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#1a1a1a',
+                        'brand-gold': '#c5a059',
+                        'brand-cream': '#f5f3ef',
+                        'brand-gray': '#666666',
+                        'brand-dark-gray': '#2d2d2d'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos de Apresentação */
+        body {
+            background-color: #f5f3ef;
+            color: #1a1a1a;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Snap Scrolling para efeito de "Slides" */
+        .snap-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animações de Entrada */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease-out;
+        }
+
+        .active .fade-in-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-300 { transition-delay: 0.3s; }
+        .delay-500 { transition-delay: 0.5s; }
+        .delay-700 { transition-delay: 0.7s; }
+
+        /* Elementos Decorativos */
+        .vertical-line {
+            width: 1px;
+            height: 100px;
+            background-color: #c5a059;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Hide scrollbar for cleaner presentation look */
+        .snap-container::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação Discreta (Pontos laterais) -->
+    <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
+        <a href="#intro" class="w-2 h-2 rounded-full bg-brand-gold hover:scale-150 transition-all opacity-50 hover:opacity-100"></a>
+        <a href="#historia" class="w-2 h-2 rounded-full bg-brand-gold hover:scale-150 transition-all opacity-50 hover:opacity-100"></a>
+        <a href="#filosofia" class="w-2 h-2 rounded-full bg-brand-gold hover:scale-150 transition-all opacity-50 hover:opacity-100"></a>
+        <a href="#hightech" class="w-2 h-2 rounded-full bg-brand-gold hover:scale-150 transition-all opacity-50 hover:opacity-100"></a>
+        <a href="#metodo" class="w-2 h-2 rounded-full bg-brand-gold hover:scale-150 transition-all opacity-50 hover:opacity-100"></a>
+        <a href="#conclusao" class="w-2 h-2 rounded-full bg-brand-gold hover:scale-150 transition-all opacity-50 hover:opacity-100"></a>
+    </div>
+
+    <div class="snap-container" id="main-container">
+
+        <!-- SLIDE 1: Capa -->
+        <section id="intro" class="bg-brand-black text-brand-cream relative">
+            <div class="absolute inset-0 opacity-20 bg-[url('https://i.ibb.co/XvGtzT3/Whats-App-Image-2026-01-07-at-19-48-21.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent"></div>
+            
+            <div class="max-w-4xl mx-auto px-6 text-center z-10 relative">
+                <div class="vertical-line fade-in-up"></div>
+                <p class="text-brand-gold tracking-[0.4em] uppercase text-sm font-semibold mb-6 fade-in-up delay-100">Mentoria Executiva</p>
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight fade-in-up delay-300">
+                    Clientologia <br>
+                    <span class="italic font-light text-brand-gold">& Conexão</span>
+                </h1>
+                <p class="font-light text-xl text-gray-300 max-w-2xl mx-auto fade-in-up delay-500">
+                    Como transformar números em histórias e clientes em legados através da escuta ativa e tecnologia.
+                </p>
+                
+                <div class="mt-12 fade-in-up delay-700">
+                    <p class="text-xs uppercase tracking-widest text-brand-gray">Por Amanda Dalprá</p>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-10 animate-bounce text-brand-gold/50">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: A Trajetória (Quem Sou) -->
+        <section id="historia" class="bg-brand-cream relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 w-full h-full">
+                <!-- Imagem Esquerda -->
+                <div class="relative h-full hidden lg:block overflow-hidden">
+                    <img src="https://i.ibb.co/mrWW1bBC/amanda-sentada-2.jpg" class="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-1000" alt="Amanda Dalprá">
+                    <div class="absolute inset-0 bg-brand-black/10"></div>
+                </div>
+
+                <!-- Texto Direita -->
+                <div class="flex items-center p-8 md:p-16 lg:p-24">
+                    <div class="max-w-xl">
+                        <span class="text-brand-gold tracking-widest text-xs uppercase font-bold mb-4 block fade-in-up">Minha Jornada</span>
+                        <h2 class="font-serif text-4xl md:text-5xl mb-8 text-brand-black fade-in-up delay-100">Não cheguei aqui vendendo produtos.</h2>
+                        
+                        <div class="space-y-6 text-brand-gray font-light text-lg leading-relaxed fade-in-up delay-300">
+                            <p>
+                                Minha construção na Referência Capital não foi baseada em decorar tabelas ou forçar fechamentos. Eu cheguei onde cheguei porque decidi <strong>entender pessoas</strong>.
+                            </p>
+                            <p>
+                                Percebi cedo que o cliente não compra consórcio. Ele compra a segurança da família, a liberdade de aposentadoria, o orgulho de um patrimônio.
+                            </p>
+                            <p class="font-medium text-brand-black border-l-2 border-brand-gold pl-4 italic">
+                                "Eu me tornei especialista em traduzir sonhos complexos em estratégias financeiras simples."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: O Sentimento (The Unspoken) -->
+        <section id="filosofia" class="bg-brand-black text-white relative">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[100px]"></div>
+            
+            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+                <div class="mb-12 fade-in-up">
+                    <i class="fas fa-fingerprint text-brand-gold text-5xl opacity-80"></i>
+                </div>
+                
+                <h2 class="font-serif text-4xl md:text-6xl mb-10 leading-tight fade-in-up delay-100">
+                    O segredo é escutar <br>
+                    <span class="text-brand-gold italic">o que não foi dito.</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-16 fade-in-up delay-300">
+                    <div class="p-6 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-brand-gold transition-colors">
+                        <h3 class="font-serif text-2xl mb-4 text-brand-gold">O Medo</h3>
+                        <p class="text-sm text-gray-400 font-light">Muitas vezes o cliente fala de rentabilidade, mas o sentimento real é medo de perder o que construiu. Identifique a emoção, não apenas o argumento.</p>
+                    </div>
+                    <div class="p-6 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-brand-gold transition-colors">
+                        <h3 class="font-serif text-2xl mb-4 text-brand-gold">O Desejo</h3>
+                        <p class="text-sm text-gray-400 font-light">Ele não quer um imóvel. Ele quer o status, o conforto ou o legado para os filhos. Conecte a solução ao desejo profundo.</p>
+                    </div>
+                    <div class="p-6 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-brand-gold transition-colors">
+                        <h3 class="font-serif text-2xl mb-4 text-brand-gold">A Conexão</h3>
+                        <p class="text-sm text-gray-400 font-light">A venda acontece quando ele sente que você entende a vida dele melhor do que o gerente do banco.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: High Tech para High Touch -->
+        <section id="hightech" class="bg-brand-cream relative overflow-hidden">
+            <!-- Elementos de Fundo -->
+            <div class="absolute left-0 top-0 w-full h-full">
+                <div class="absolute right-[-10%] top-[-10%] text-[200px] font-serif text-brand-gold/5 opacity-50 select-none">DATA</div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+                <div class="fade-in-up">
+                    <span class="text-brand-black tracking-widest text-xs uppercase font-bold mb-4 block">Metodologia Exclusiva</span>
+                    <h2 class="font-serif text-5xl md:text-6xl mb-6 text-brand-black">High Tech <br><span class="italic text-brand-gold">& Human Touch</span></h2>
+                    
+                    <p class="text-brand-gray font-light text-lg mb-8 text-justify">
+                        Muitos acham que tecnologia afasta. Na minha metodologia, o <strong>High Tech</strong> é a base para a <strong>Clientologia</strong>. Eu utilizo dados e organização digital para ter "memória infinita" sobre meus clientes.
+                    </p>
+
+                    <ul class="space-y-4 font-light text-brand-black">
+                        <li class="flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center text-white text-xs"><i class="fas fa-check"></i></span>
+                            <span>Saber o momento exato da vida dele.</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center text-white text-xs"><i class="fas fa-check"></i></span>
+                            <span>Antecipar necessidades antes que ele peça.</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center text-white text-xs"><i class="fas fa-check"></i></span>
+                            <span>Personalização em escala.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="relative fade-in-up delay-300">
+                    <div class="aspect-square bg-brand-black p-8 md:p-12 flex flex-col justify-center shadow-2xl relative">
+                        <div class="absolute top-4 right-4 text-brand-gold text-4xl">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-3xl mb-6">"O sistema organiza, eu acolho."</h3>
+                        <p class="text-gray-400 font-light leading-relaxed">
+                            O uso de ferramentas avançadas me permite focar 100% na conexão humana durante a conversa. Eu não gasto energia lembrando dados, gasto energia sentindo o cliente. Isso é atendimento conectivo e específico.
+                        </p>
+                    </div>
+                    <!-- Imagem decorativa sobreposta -->
+                    <img src="https://i.ibb.co/twNpJ8h1/amanda-vestido.jpg" class="absolute -bottom-10 -left-10 w-40 h-40 object-cover border-4 border-brand-cream shadow-lg hidden md:block grayscale">
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: A Rotina (Conversas Semanais) -->
+        <section id="metodo" class="bg-brand-dark-gray text-brand-cream relative">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <span class="text-brand-gold tracking-widest text-xs uppercase font-bold mb-4 block fade-in-up">O Rito da Conexão</span>
+                <h2 class="font-serif text-4xl md:text-5xl mb-12 fade-in-up delay-100">Não é suporte. É relacionamento.</h2>
+
+                <!-- Timeline Horizontal -->
+                <div class="relative mt-16 fade-in-up delay-300">
+                    <!-- Linha -->
+                    <div class="absolute top-1/2 left-0 w-full h-px bg-brand-gold/30 hidden md:block transform -translate-y-1/2"></div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                        <!-- Step 1 -->
+                        <div class="group">
+                            <div class="w-16 h-16 mx-auto bg-brand-black border border-brand-gold rounded-full flex items-center justify-center text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors duration-300">
+                                <i class="far fa-comments"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl mb-2 text-white">Conversa Semanal</h3>
+                            <p class="text-sm text-gray-400 font-light px-4">
+                                Não falo apenas de boletos. Falo de vida, de progresso, de família. A conversa flui naturalmente porque o interesse é genuíno.
+                            </p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="group">
+                            <div class="w-16 h-16 mx-auto bg-brand-black border border-brand-gold rounded-full flex items-center justify-center text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors duration-300">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl mb-2 text-white">Naturalidade</h3>
+                            <p class="text-sm text-gray-400 font-light px-4">
+                                O cliente deixa de ser um contrato e se torna um amigo. A barreira "comercial" cai e a confiança absoluta se estabelece.
+                            </p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="group">
+                            <div class="w-16 h-16 mx-auto bg-brand-black border border-brand-gold rounded-full flex items-center justify-center text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors duration-300">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl mb-2 text-white">História de Vida</h3>
+                            <p class="text-sm text-gray-400 font-light px-4">
+                                Tratamos cada cliente como uma biografia em construção. Nós somos os arquitetos que ajudam a escrever os próximos capítulos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-20 p-6 bg-brand-gold/10 border border-brand-gold/20 inline-block fade-in-up delay-500">
+                    <p class="font-serif italic text-xl">"Quando você se interessa pela história, o fechamento é apenas uma consequência inevitável."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: Conclusão -->
+        <section id="conclusao" class="bg-brand-cream relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 w-full h-full items-center">
+                <div class="p-10 lg:pl-32 order-2 lg:order-1 fade-in-up">
+                    <h2 class="font-serif text-5xl md:text-7xl mb-6 text-brand-black">Vamos construir <br> <span class="text-brand-gold">Legados?</span></h2>
+                    <p class="text-brand-gray font-light text-lg mb-10 max-w-md">
+                        O mercado está cheio de vendedores. O que o mundo precisa é de consultores que entendam de gente. <br><br>
+                        Sejam bem-vindos à era da Clientologia.
+                    </p>
+                    
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/souamandadalpra/" class="text-brand-black hover:text-brand-gold text-2xl transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-brand-black hover:text-brand-gold text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Imagem Final -->
+                <div class="h-full relative order-1 lg:order-2 overflow-hidden">
+                    <img src="https://i.ibb.co/bRP99qmG/amanda-100-m.jpg" class="absolute inset-0 w-full h-full object-cover" style="object-position: top center;">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-cream via-transparent to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Intersection Observer para ativar animações quando o slide entra na tela
+        const observerOptions = {
+            root: document.getElementById('main-container'),
+            threshold: 0.4
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // Atualizar bolinhas de navegação
+                    const id = entry.target.id;
+                    document.querySelectorAll('.fixed a').forEach(link => {
+                        link.classList.remove('scale-150', 'opacity-100', 'bg-brand-black');
+                        link.classList.add('opacity-50', 'bg-brand-gold');
+                        if(link.getAttribute('href') === '#' + id) {
+                            link.classList.add('scale-150', 'opacity-100');
+                            link.classList.remove('opacity-50');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Garantir que a animação inicial funcione
+        window.addEventListener('load', () => {
+            document.getElementById('intro').classList.add('active');
+        });
+    </script>
+</body>
+</html>
