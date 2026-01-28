@@ -109,7 +109,11 @@
 
         <!-- SLIDE 1: Capa -->
         <section id="intro" class="bg-brand-black text-brand-cream relative">
-            <div class="absolute inset-0 opacity-20 bg-[url('https://i.ibb.co/XvGtzT3/Whats-App-Image-2026-01-07-at-19-48-21.jpg')] bg-cover bg-center"></div>
+            <!-- Imagem de Fundo Ajustada (Object Position 50% 20% para focar no rosto) -->
+            <img src="https://i.ibb.co/XvGtzT3/Whats-App-Image-2026-01-07-at-19-48-21.jpg" 
+                 class="absolute inset-0 w-full h-full object-cover object-[50%_20%] opacity-20" 
+                 alt="Fundo Amanda">
+            
             <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent"></div>
             
             <div class="max-w-4xl mx-auto px-6 text-center z-10 relative">
@@ -134,16 +138,18 @@
         </section>
 
         <!-- SLIDE 2: A Trajetória (Quem Sou) -->
-        <section id="historia" class="bg-brand-cream relative">
+        <section id="historia" class="bg-brand-cream relative flex flex-col lg:flex-row">
             <div class="grid grid-cols-1 lg:grid-cols-2 w-full h-full">
-                <!-- Imagem Esquerda -->
-                <div class="relative h-full hidden lg:block overflow-hidden">
-                    <img src="https://i.ibb.co/mrWW1bBC/amanda-sentada-2.jpg" class="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-1000" alt="Amanda Dalprá">
+                <!-- Imagem Esquerda (Agora visível no mobile, com altura controlada) -->
+                <div class="relative w-full h-[40vh] lg:h-full overflow-hidden order-1">
+                    <img src="https://i.ibb.co/mrWW1bBC/amanda-sentada-2.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover object-top filter grayscale hover:grayscale-0 transition-all duration-1000" 
+                         alt="Amanda Dalprá">
                     <div class="absolute inset-0 bg-brand-black/10"></div>
                 </div>
 
                 <!-- Texto Direita -->
-                <div class="flex items-center p-8 md:p-16 lg:p-24">
+                <div class="flex items-center p-8 md:p-16 lg:p-24 order-2">
                     <div class="max-w-xl">
                         <span class="text-brand-gold tracking-widest text-xs uppercase font-bold mb-4 block fade-in-up">Minha Jornada</span>
                         <h2 class="font-serif text-4xl md:text-5xl mb-8 text-brand-black fade-in-up delay-100">Não cheguei aqui vendendo produtos.</h2>
@@ -227,8 +233,8 @@
                     </ul>
                 </div>
 
-                <div class="relative fade-in-up delay-300">
-                    <div class="aspect-square bg-brand-black p-8 md:p-12 flex flex-col justify-center shadow-2xl relative">
+                <div class="relative fade-in-up delay-300 mt-8 md:mt-0">
+                    <div class="aspect-square bg-brand-black p-8 md:p-12 flex flex-col justify-center shadow-2xl relative z-20">
                         <div class="absolute top-4 right-4 text-brand-gold text-4xl">
                             <i class="fas fa-microchip"></i>
                         </div>
@@ -237,8 +243,8 @@
                             O uso de ferramentas avançadas me permite focar 100% na conexão humana durante a conversa. Eu não gasto energia lembrando dados, gasto energia sentindo o cliente. Isso é atendimento conectivo e específico.
                         </p>
                     </div>
-                    <!-- Imagem decorativa sobreposta -->
-                    <img src="https://i.ibb.co/twNpJ8h1/amanda-vestido.jpg" class="absolute -bottom-10 -left-10 w-40 h-40 object-cover border-4 border-brand-cream shadow-lg hidden md:block grayscale">
+                    <!-- Imagem decorativa ajustada para mobile -->
+                    <img src="https://i.ibb.co/twNpJ8h1/amanda-vestido.jpg" class="absolute -bottom-6 -right-6 md:-bottom-10 md:-left-10 w-24 h-24 md:w-40 md:h-40 object-cover border-4 border-brand-cream shadow-lg block grayscale z-30">
                 </div>
             </div>
         </section>
@@ -297,7 +303,7 @@
         </section>
 
         <!-- SLIDE 6: Conclusão -->
-        <section id="conclusao" class="bg-brand-cream relative">
+        <section id="conclusao" class="bg-brand-cream relative flex flex-col lg:flex-row">
             <div class="grid grid-cols-1 lg:grid-cols-2 w-full h-full items-center">
                 <div class="p-10 lg:pl-32 order-2 lg:order-1 fade-in-up">
                     <h2 class="font-serif text-5xl md:text-7xl mb-6 text-brand-black">Vamos construir <br> <span class="text-brand-gold">Legados?</span></h2>
@@ -312,10 +318,13 @@
                     </div>
                 </div>
 
-                <!-- Imagem Final -->
-                <div class="h-full relative order-1 lg:order-2 overflow-hidden">
-                    <img src="https://i.ibb.co/bRP99qmG/amanda-100-m.jpg" class="absolute inset-0 w-full h-full object-cover" style="object-position: top center;">
-                    <div class="absolute inset-0 bg-gradient-to-r from-brand-cream via-transparent to-transparent"></div>
+                <!-- Imagem Final (Ajustada para Mobile e Desktop) -->
+                <div class="relative w-full h-[40vh] lg:h-full order-1 lg:order-2 overflow-hidden">
+                    <img src="https://i.ibb.co/bRP99qmG/amanda-100-m.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover object-top" 
+                         style="object-position: center 20%;"
+                         alt="Amanda Dalprá Final">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-cream/50 lg:bg-gradient-to-r lg:from-brand-cream via-transparent to-transparent"></div>
                 </div>
             </div>
         </section>
